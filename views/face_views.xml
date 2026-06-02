@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <!-- Tree View -->
+
+    <record id="face_tree_view"
+            model="ir.ui.view">
+
+        <field name="name">student.face.tree</field>
+
+        <field name="model">student.face</field>
+
+        <field name="arch" type="xml">
+
+            <list>
+
+                <field name="student_id"/>
+                <field name="capture_date"/>
+                <field name="quality_score"/>
+                <field name="brightness_score"/>
+                <field name="blur_score"/>
+                <field name="eyes_visible"/>
+
+            </list>
+
+        </field>
+
+    </record>
+
+
+    <!-- Form View -->
+
+    <record id="face_form_view"
+            model="ir.ui.view">
+
+        <field name="name">student.face.form</field>
+
+        <field name="model">student.face</field>
+
+        <field name="arch" type="xml">
+
+            <form>
+
+                <sheet>
+
+                    <group>
+
+                        <group>
+
+                            <field name="student_id"/>
+
+                            <field name="capture_date"/>
+
+                            <field name="quality_score"/>
+
+                            <field name="brightness_score"/>
+
+                            <field name="blur_score"/>
+
+                        </group>
+
+                        <group>
+
+                            <field name="eyes_visible"/>
+
+                            <field name="face_centered"/>
+
+                            <field name="face_angle"/>
+
+                            <field name="active"/>
+
+                        </group>
+
+                    </group>
+
+                    <group>
+
+                        <field name="image"
+                               widget="image"/>
+
+                    </group>
+
+                    <group>
+
+                        <field name="embedding"
+                               readonly="1"/>
+
+                    </group>
+
+                </sheet>
+
+            </form>
+
+        </field>
+
+    </record>
+
+
+    <!-- Action -->
+
+    <record id="face_action"
+            model="ir.actions.act_window">
+
+        <field name="name">Face Images</field>
+
+        <field name="res_model">student.face</field>
+
+        <field name="view_mode">list,form</field>
+
+    </record>
+
+</odoo>

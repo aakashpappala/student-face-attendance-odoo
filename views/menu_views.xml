@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <menuitem
+        id="face_attendance_root_menu"
+        name="Face Attendance"
+        sequence="10"/>
+
+    <menuitem
+        id="student_menu"
+        name="Students"
+        parent="face_attendance_root_menu"
+        action="student_action"
+        sequence="1"/>
+
+    <menuitem
+        id="attendance_menu"
+        name="Attendance"
+        parent="face_attendance_root_menu"
+        action="attendance_action"
+        sequence="2"/>
+
+    <menuitem
+        id="session_menu"
+        name="Sessions"
+        parent="face_attendance_root_menu"
+        action="attendance_session_action"
+        sequence="3"/>
+
+<menuitem
+    id="face_menu"
+    name="Face Images"
+    parent="face_attendance_root_menu"
+    action="face_action"
+    sequence="2"/>
+
+</odoo>

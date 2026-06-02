@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <record id="settings_tree_view"
+            model="ir.ui.view">
+
+        <field name="name">face.attendance.settings.tree</field>
+
+        <field name="model">face.attendance.settings</field>
+
+        <field name="arch" type="xml">
+
+            <list>
+
+                <field name="name"/>
+
+                <field name="capture_count"/>
+
+                <field name="quality_threshold"/>
+
+                <field name="similarity_threshold"/>
+
+                <field name="active"/>
+
+            </list>
+
+        </field>
+
+    </record>
+
+
+    <record id="settings_form_view"
+            model="ir.ui.view">
+
+        <field name="name">face.attendance.settings.form</field>
+
+        <field name="model">face.attendance.settings</field>
+
+        <field name="arch" type="xml">
+
+            <form>
+
+                <sheet>
+
+                    <group>
+
+                        <field name="name"/>
+
+                    </group>
+
+                    <group string="Registration">
+
+                        <field name="capture_count"/>
+
+                        <field name="quality_threshold"/>
+
+                    </group>
+
+                    <group string="Recognition">
+
+                        <field name="similarity_threshold"/>
+
+                        <field name="recognition_interval"/>
+
+                    </group>
+
+                    <group string="Camera">
+
+                        <field name="camera_index"/>
+
+                        <field name="camera_width"/>
+
+                        <field name="camera_height"/>
+
+                    </group>
+
+                </sheet>
+
+            </form>
+
+        </field>
+
+    </record>
+
+
+    <record id="settings_action"
+            model="ir.actions.act_window">
+
+        <field name="name">Settings</field>
+
+        <field name="res_model">face.attendance.settings</field>
+
+        <field name="view_mode">list,form</field>
+
+    </record>
+
+</odoo>
